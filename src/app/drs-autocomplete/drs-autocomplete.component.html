@@ -1,0 +1,10 @@
+
+<input type="text"  #autocompleter
+[attr.list]="getListId()"
+[value]="selectedValue"
+(change)="inputChanged(autocompleter.value)">
+<datalist [attr.id]="getListId()">
+  <option *ngFor="let value of values" [value]="value">
+      {{value}}
+    </option>
+</datalist>
